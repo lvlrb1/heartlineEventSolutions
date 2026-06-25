@@ -6,9 +6,9 @@
   --color-primary-hover: #371a40;
   --color-primary-light: #6A3180;
   --color-primary-lighter: #7A3994;
-  --color-accent: #CDA8E6;
-  --color-accent-light: #E6D0F3;
-  --color-accent-dark: #9B6DB8;
+  --color-accent: #E0AD49;
+  --color-accent-light: #F5D783;
+  --color-accent-dark: #B5792F;
 }
 
 html {
@@ -34,6 +34,83 @@ html {
   0% { transform: scale(0.8); opacity: 0.5; }
   50% { transform: scale(1); opacity: 0.3; }
   100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+@keyframes map-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(18px, -22px, 0) rotate(1deg); }
+}
+
+@keyframes line-draw {
+  0% { stroke-dashoffset: 920; opacity: 0; }
+  16% { opacity: 0.55; }
+  68% { opacity: 0.55; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.hero-kinetic-map {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  animation: map-drift 18s ease-in-out infinite;
+}
+
+.hero-flow {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(92rem, 130vw);
+  max-width: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+.hero-flow-path,
+.hero-pulse-line {
+  stroke: rgba(245, 215, 131, 0.38);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 18 18;
+  filter: drop-shadow(0 0 10px rgba(224, 173, 73, 0.22));
+}
+
+.hero-flow-path-2 {
+  stroke: rgba(255, 255, 255, 0.24);
+  stroke-dasharray: 14 20;
+}
+
+.hero-pulse-line {
+  stroke: rgba(255, 255, 255, 0.65);
+  stroke-width: 3;
+  stroke-dasharray: 260 660;
+  stroke-dashoffset: 920;
+  animation: line-draw 7s ease-in-out infinite;
+}
+
+.hero-arc {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.hero-arc-1 {
+  width: 58rem;
+  height: 58rem;
+  top: -24rem;
+  left: -12rem;
+}
+
+.hero-arc-2 {
+  width: 42rem;
+  height: 42rem;
+  right: -10rem;
+  top: 8rem;
+}
+
+.hero-arc-3 {
+  width: 52rem;
+  height: 52rem;
+  left: 24%;
+  bottom: -34rem;
 }
 
 .animate-float {

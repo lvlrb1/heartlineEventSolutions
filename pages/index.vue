@@ -4,7 +4,6 @@
     <ServicesSection />
     <ProductsSection />
     <AboutSection />
-    <TestimonialsSection />
     <ContactSection />
   </div>
 </template>

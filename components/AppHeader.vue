@@ -5,7 +5,6 @@ const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Products', href: '#products' },
   { label: 'About', href: '#about' },
-  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -42,35 +41,20 @@ onMounted(() => {
           @click.prevent="scrollTo('#hero')"
           class="flex items-center gap-2.5 group"
         >
-          <svg
-            class="w-8 h-8 transition-transform group-hover:scale-110"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="logo-g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#43204f" />
-                <stop offset="100%" stop-color="#6A3180" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M16 28l-1.4-1.3C7.4 20.2 3 16.4 3 11.5 3 7.4 6.4 4 10.5 4c2.3 0 4.5 1.1 6 2.7C17.5 5.1 19.7 4 22 4c4.1 0 7.5 3.4 7.5 7.5 0 4.9-4.4 8.7-11.6 15.2L16 28z"
-              class="fill-primary dark:fill-accent"
-            />
-            <line
-              x1="4"
-              y1="15"
-              x2="28"
-              y2="15"
-              class="stroke-accent dark:stroke-primary-light"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-          </svg>
+          <img
+            src="/heartline-mark.png"
+            alt=""
+            class="w-9 h-9 rounded-lg object-cover transition-transform group-hover:scale-105"
+          />
           <span
-            class="text-lg font-bold tracking-tight text-primary dark:text-accent"
+            class="text-sm sm:text-base lg:text-lg font-bold tracking-tight transition-all duration-300"
+            :class="
+              scrolled
+                ? 'text-primary dark:text-accent opacity-100 translate-x-0'
+                : 'text-white/0 opacity-0 -translate-x-2 pointer-events-none'
+            "
           >
-            Heartline
+            Heartline Event Solutions
           </span>
         </a>
 
@@ -80,7 +64,12 @@ onMounted(() => {
             :key="link.href"
             :href="link.href"
             @click.prevent="scrollTo(link.href)"
-            class="px-3 lg:px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-accent rounded-lg hover:bg-slate-100/70 dark:hover:bg-slate-800/50 transition-colors"
+            class="px-3 lg:px-4 py-2 text-sm font-medium rounded-lg transition-colors"
+            :class="
+              scrolled
+                ? 'text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-accent hover:bg-slate-100/70 dark:hover:bg-slate-800/50'
+                : 'text-white/85 hover:text-accent-light hover:bg-white/10'
+            "
           >
             {{ link.label }}
           </a>
@@ -93,7 +82,12 @@ onMounted(() => {
           <ThemeToggle />
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            class="p-2 rounded-lg transition-colors"
+            :class="
+              scrolled
+                ? 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                : 'text-white hover:bg-white/10'
+            "
             aria-label="Toggle menu"
           >
             <svg

@@ -3,18 +3,11 @@ const { el, visible } = useReveal()
 
 const contactMethods = [
   {
-    title: 'Email Us',
-    description: 'For inquiries and partnerships',
-    value: 'hello@heartlineevents.com',
-    href: 'mailto:hello@heartlineevents.com',
-    icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-  },
-  {
     title: 'Support',
-    description: 'Technical help and questions',
-    value: 'support@heartlineevents.com',
-    href: 'mailto:support@heartlineevents.com',
-    icon: 'M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z',
+    description: 'Questions and help',
+    value: 'support@heartlineapps.com',
+    href: 'mailto:support@heartlineapps.com',
+    icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
   },
   {
     title: 'Location',
@@ -56,12 +49,12 @@ const contactMethods = [
           class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
         >
           Whether you have a question about our products, need support, or want
-          to explore a partnership — we'd love to hear from you.
+          to explore a partnership, we'd love to hear from you.
         </p>
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-4xl mx-auto"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-2xl mx-auto"
       >
         <div
           v-for="(method, i) in contactMethods"

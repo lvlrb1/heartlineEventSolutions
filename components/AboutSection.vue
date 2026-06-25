@@ -56,15 +56,9 @@ const values = [
                 place.
               </p>
               <p>
-                Founded with a passion for bringing people together, we combine
-                deep event industry expertise with cutting-edge technology to
-                build tools that event planners actually love using.
-              </p>
-              <p>
-                Our team has planned, coordinated, and attended hundreds of
-                events. We know the stress, the chaos, and the magic. That's
-                why we build software that handles the hard parts, so you can
-                focus on creating moments that matter.
+                Our mission is to build software that handles the hard parts of
+                event planning, so you can focus on creating moments that
+                matter.
               </p>
             </div>
           </div>
