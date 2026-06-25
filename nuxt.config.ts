@@ -6,7 +6,7 @@ const siteTitle =
   'Heartline Event Solutions LLC — Event Planning & Seating Chart Software'
 const siteDescription =
   'Heartline Event Solutions LLC builds modern event-planning software, including A Seat Awaits — our seating chart and guest management app. Making every event your best day ever.'
-const ogImage = `${siteUrl}/heartline-logo-full.png`
+const ogImage = `${siteUrl}/og-image.png`
 
 // JSON-LD structured data: the LLC and the website it publishes.
 const structuredData = {
@@ -89,11 +89,12 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: siteUrl },
         { property: 'og:image', content: ogImage },
-        { property: 'og:image:width', content: '2000' },
-        { property: 'og:image:height', content: '2000' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
         {
           property: 'og:image:alt',
-          content: 'Heartline Event Solutions logo',
+          content:
+            'Heartline Event Solutions — Making Every Event Your Best Day Ever',
         },
         { property: 'og:locale', content: 'en_US' },
 
@@ -104,7 +105,8 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: ogImage },
         {
           name: 'twitter:image:alt',
-          content: 'Heartline Event Solutions logo',
+          content:
+            'Heartline Event Solutions — Making Every Event Your Best Day Ever',
         },
       ],
       link: [
